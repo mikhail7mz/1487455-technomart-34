@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/firasans-700.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400-italic.woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2");
+  font-display: swap;
+}
+
+:root {
+  --basic-red: #ee3643;
+  --basic-green: #63a63e;
+  --basic-grey: #3d546f;
+  --basic-greylight: #c5c5c5;
+  --basic-background: #f1f5f7;
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+
+  --special-ylellow: #ffbf47;
+  --special-blue: #3bbce3;
+  --special-lilac: #dc91d8;
+  --special-greenlight: #8ed78f;
+  --special-yellowlight: #ffd180;
+
+  --status-error: #ba2732;
+  --status-warning: #ffbf47;
+  --status-success: #5fbb2d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  font: 16px/24px "PT Sans", Arial, Tahoma, sans-serif;
+  color: var(--basic-black);
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0 115px;
+}
+
+.heading {
+  font: 700 36px/42px "Fira Sans", Arial, Tahoma, sans-serif;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font: 700 24px/30px "PT Sans", Arial, Tahoma, sans-serif;
+}
