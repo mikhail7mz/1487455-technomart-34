@@ -9,29 +9,35 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__row">
-        <div class="container">
+      <div class="header__row header__row--white">
+        <div class="container header__row-content">
           <h1 class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
           <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <a class="header__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </div>
       </div>
-      <div class="header__row">
-        <div class="container">
+      <div class="header__row header__row--darkblue">
+        <div class="container header__row-content">
           <a class="logo">
             <img class="logo__image" width="109" height="18" src="images/logo.svg" alt="Логотип.">
           </a>
-          <form class="search" action="https://echo.htmlacademy.ru/" method="get">
-            <label>
+          <form class="form-search" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="form-search__field">
               <span class="visually-hidden">Поиск.</span>
-              <input class="input" type="text" name="search" placeholder="Поиск:">
+              <input class="form-search__input" type="text" name="search" placeholder="Поиск:">
+              <svg class="filter-search__icon" width="20" height="20" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16a8 8 0 1 1 6.32-3.1l5.39 5.4-1.42 1.4-5.38-5.38A7.97 7.97 0 0 1 8 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"/>
+              </svg>
+              <button class="form-search__reset" type="reset">
+                <span class="visually-hidden">Очистить.</span>
+              </button>
             </label>
           </form>
-          <button class="button button--simple" type="button">Войти</button>
+          <button class="button button--simple button--login" type="button">Войти</button>
         </div>
       </div>
-      <div class="header__row">
-        <div class="container">
+      <div class="header__row header__row--blue">
+        <div class="container header__row-content">
           <nav class="navigation">
             <ul class="menu">
               <li class="menu__item">
@@ -60,40 +66,40 @@
           <div class="user-menu">
             <a class="user-menu__item user-menu__item--favorite" href="#">
               <span class="visually-hidden">Избранное.</span>
-              <span class="user-menu__counter">12</span>
+              <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
             </a>
             <a class="user-menu__item user-menu__item--cart" href="#">
               <span class="visually-hidden">Корзина.</span>
-              <span class="user-menu__counter">2</span>
+              <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
             </a>
-            <a class="button button--green" href="#">Оформить заказ</a>
+            <a class="user-menu__item user-menu__item--button button button--green" href="#">Оформить заказ</a>
           </div>
         </div>
       </div>
     </header>
     <main class="main">
-      <section class="promo">
+      <section class="promo container">
         <h2 class="visually-hidden">Каталог товаров и услуг.</h2>
-        <div class="promo__tile">
+        <div class="promo__tile promo__tile--paints promo__tile--new">
           <h2 class="promo__title subheading">материалы</h2>
-          <a class="promo__link button button--transparent" href="#">на любой вкус</a>
+          <a class="promo__link button" href="#">на любой вкус</a>
         </div>
-        <div class="promo__tile">
+        <div class="promo__tile promo__tile--tool">
           <h2 class="promo__title subheading">инструмент</h2>
-          <a class="promo__link button button--transparent" href="#">на все случаи</a>
+          <a class="promo__link button" href="#">на все случаи</a>
         </div>
-        <div class="promo__tile">
+        <div class="promo__tile promo__tile--equipment">
           <h2 class="promo__title subheading">техника</h2>
-          <a class="promo__link button button--transparent" href="#">для стройки</a>
+          <a class="promo__link button" href="#">для стройки</a>
         </div>
-        <div class="promo__tile promo__tile--big slider">
+        <div class="promo__tile promo__tile promo__tile--big slider">
           <ul class="slider__slide-list">
             <li class="slider__slide">
               <div class="slider__slide-content">
                 <h2 class="slider__title heading">Дрели</h2>
                 <p class="slider__description">Соседям на радость!</p>
               </div>
-              <img width="770" height="390" src="images/slider/drills.jpg" alt="Мужчина использующий дрель.">
+              <img class="slider__image" width="770" height="390" src="images/slider/drills.jpg" alt="Мужчина использующий дрель.">
               <a class="slider__link" href="#">Открыть каталог</a>
             </li>
           </ul>
@@ -104,17 +110,21 @@
             <span class="visually-hidden">Вперед.</span>
           </button>
           <ul class="slider__pagination">
-            <li class="slider__pagination-item current">Слайд 1.</li>
-            <li class="slider__pagination-item">Слайд 2.</li>
+            <li class="slider__pagination-item current">
+              <span class="visually-hidden">Слайд 1.</span>
+            </li>
+            <li class="slider__pagination-item">
+              <span class="visually-hidden">Слайд 2.</span>
+            </li>
           </ul>
         </div>
-        <div class="promo__tile">
+        <div class="promo__tile promo__tile--sale">
           <h2 class="promo__title subheading">Скидки 50%</h2>
-          <a class="promo__link button button--transparent" href="#">на 350 товаров</a>
+          <a class="promo__link button" href="#">на 350 товаров</a>
         </div>
-        <div class="promo__tile">
+        <div class="promo__tile promo__tile--delivery">
           <h2 class="promo__title subheading">Доставка</h2>
-          <a class="promo__link button button--transparent" href="#">бесплатно</a>
+          <a class="promo__link button" href="#">бесплатно</a>
         </div>
       </section>
       <section class="catalog">
