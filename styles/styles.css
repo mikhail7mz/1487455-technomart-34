@@ -65,6 +65,8 @@
   --status-success: #5fbb2d;
 
   --cursor-pointer: url("../images/icons/pointer.svg"), pointer;
+  --focus-default: 0 0 0 2px var(--basic-white),
+                   0 0 3px 5px var(--basic-blue-dark);
 }
 
 *,
@@ -105,6 +107,7 @@ body {
 
 .main {
   flex-grow: 1;
+  transform: translateX(4px);
 }
 
 .container {
@@ -130,7 +133,6 @@ body {
 }
 
 .header__row--darkblue {
-  padding-left: 3px;
   background-color: var(--basic-blue-dark);
 }
 
@@ -200,7 +202,7 @@ body {
   position: relative;
   z-index: 1;
   flex-shrink: 0;
-  padding: 12px 57px 15px 54px;
+  padding: 12px 57px 15px;
   background: var(--basic-red);
   box-shadow: 0 5px 0 rgb(0 0 0 / 24%),
               0 5px 0 var(--basic-red);
@@ -315,6 +317,10 @@ body {
   background: none;
 }
 
+.button:focus {
+  box-shadow: var(--focus-default);
+}
+
 .button--green {
   padding: 12px 11px;
   color: var(--basic-white);
@@ -353,7 +359,7 @@ body {
 .button--login {
   max-width: 300px;
   padding-left: 26px;
-  padding-right: 2px;
+  padding-right: 0;
   background-image: url("../images/icons/login.svg");
   background-repeat: no-repeat;
   background-position: center left;
@@ -390,21 +396,20 @@ body {
   width: 810px;
   margin: 0;
   padding: 0;
-  padding-left: 3px;
   list-style: none;
 }
 
 .menu__link {
   display: block;
-  min-width: 73px;
-  padding: 21px 8px 25px;
+  min-width: 74px;
+  padding: 19px 8px 27px;
   color: var(--basic-white);
   text-decoration: none;
   text-align: center;
 }
 
 .menu__item:first-child .menu__link {
-  padding-left: 0;
+  padding-left: 4px;
 }
 
 .user-menu {
@@ -459,8 +464,6 @@ body {
 }
 
 .promo {
-  position: relative;
-  left: 4px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: dense;
@@ -616,7 +619,6 @@ body {
   display: grid;
   grid-template-columns: 220px 1fr;
   column-gap: 79px;
-  transform: translateX(4px);
 }
 
 .catalog__heading {
@@ -626,6 +628,7 @@ body {
 
 .catalog__content {
   padding-top: 33px;
+  padding-bottom: 53px;
 }
 
 .control-select {
@@ -656,7 +659,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 29px 30px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
   padding: 0;
   list-style: none;
 }
@@ -788,4 +792,109 @@ body {
 
 .products__button:hover {
   cursor: var(--cursor-pointer);
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 17px;
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination__link {
+  display: block;
+  min-width: 50px;
+  padding: 15px 14px 14px;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.pagination__link:focus {
+  outline: none;
+  box-shadow: var(--focus-default);
+}
+
+.pagination__link:hover {
+  color: var(--basic-white);
+  background-color: var(--basic-blue-dark);
+  cursor: var(--cursor-pointer);
+}
+
+.pagination__link:active {
+  opacity: 0.4;
+}
+
+.pagination__item.current .pagination__link {
+  color: var(--basic-blue);
+  background-color: var(--basic-white);
+}
+
+.pagination__button {
+  padding: 13px 37px 14px;
+}
+
+.services {
+  padding: 52px 0;
+  background-color: var(--basic-grey-extralight);
+}
+
+.services__heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.services__description {
+  width: 556px;
+  margin: 0 auto 65px;
+  padding-left: 4px;
+  font-size: 18px;
+  color: var(--basic-blue-dark);
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+  padding: 31px 24px 43px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  background: #FFFFFF;
+}
+
+.services__title {
+  margin-bottom: 21px;
+}
+
+.services__text {
+  margin: 0;
+  padding: 0 2px;
+}
+
+.services__icon {
+  order: -1;
+  margin-bottom: 46px;
+  color: var(--basic-red-hover);
 }
