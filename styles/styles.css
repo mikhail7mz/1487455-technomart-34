@@ -107,7 +107,6 @@ body {
 
 .main {
   flex-grow: 1;
-  transform: translateX(4px);
 }
 
 .container {
@@ -126,6 +125,10 @@ body {
   margin: 0;
   font: 700 24px/30px "PT Sans", Arial, Tahoma, sans-serif;
   text-transform: uppercase;
+}
+
+.header {
+  transform: translateX(-4px);
 }
 
 .header__row--white {
@@ -199,6 +202,8 @@ body {
 }
 
 .logo {
+  display: block;
+  width: max-content;
   position: relative;
   z-index: 1;
   flex-shrink: 0;
@@ -904,7 +909,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 170px;
   padding-top: 52px;
-  padding-bottom: 52px;
+  padding-bottom: 48px;
 }
 
 .about-us__heading,
@@ -922,4 +927,95 @@ body {
   display: inline-block;
   margin-top: 25px;
   padding: 13px 45px 14px;
+}
+
+.footer {
+  background-color: var(--basic-dark);
+  color: var(--basic-white);
+}
+
+.footer__copyrights {
+  padding-top: 20px;
+  padding-bottom: 22px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--basic-blue-dark);
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 29px;
+  padding-bottom: 33px;
+}
+
+.footer__content--copyrights {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer__column:last-child {
+  text-align: right;
+}
+
+.footer__logo {
+  margin-top: -29px;
+  margin-bottom: 26px;
+  padding: 13px 58px 17px 55px;
+}
+
+.footer__contacts {
+  width: 330px;
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+.footer__text,
+.form-subscribe__description {
+  margin: 0;
+}
+
+.footer__link {
+  color: var(--special-yellowlight);
+  text-decoration: none;
+}
+
+.footer__link--offset {
+  display: block;
+  margin-bottom: 29px;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 0;
+  padding: 0 1px;
+  list-style: none;
+}
+
+.social__link {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social__link--pinterst {
+  background-image: url("../images/icons/social-pinterest.svg");
+}
+
+.social__link--vk {
+  background-image: url("../images/icons/social-vk.svg");
+}
+
+.social__link--vsco {
+  background-image: url("../images/icons/social-vsco.svg");
+}
+
+.social__link:hover {
+  background-color: var(--basic-blue-dark);
 }

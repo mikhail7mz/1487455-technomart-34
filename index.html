@@ -353,45 +353,51 @@
       </div>
     </main>
     <footer class="footer">
-      <div class="footer__column">
-        <a class="logo">
-          <img class="logo__image" src="images/logo.svg" alt="Логотип.">
-        </a>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8+7 (812) 555-05-55</p>
-        <ul class="social">
-          <li class="social__item">
-            <a class="social__link social__link--pinterst" href="#">
-              <span class="visually-hidden">Перейти в pinterst.</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="#">
-              <span class="visually-hidden">Перейти в vkontakte.</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--vsco" href="#">
-              <span class="visually-hidden">Перейти в vsco.</span>
-            </a>
-          </li>
-        </ul>
+      <div class="footer__content container">
+        <div class="footer__column">
+          <a class="footer__logo logo">
+            <img class="footer__logo-image logo__image" width="111" height="21" src="images/logo.svg" alt="Логотип.">
+          </a>
+          <p class="footer__contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--pinterst" href="#">
+                <span class="visually-hidden">Перейти в pinterst.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#">
+                <span class="visually-hidden">Перейти в vkontakte.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vsco" href="#">
+                <span class="visually-hidden">Перейти в vsco.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <p class="footer__text">Обратная связь:</p>
+          <a class="footer__link footer__link--offset" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <form class="form-subscribe" action="https://echo.htmlacademy.ru/" method="get">
+            <p class="form-subscribe__description">Получайте лучшие предложения</p>
+            <label>
+              <span class="visually-hidden">Подписаться на рассылку.</span>
+              <input class="form-subscribe__input input" type="email" name="subscribe" placeholder="email@example.com">
+            </label>
+          </form>
+        </div>
       </div>
-      <div class="footer__column">
-        <p>Обратная связь:</p>
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        <p>Получайте лучшие предложения</p>
-        <form class="subscribe" action="https://echo.htmlacademy.ru/" method="get">
-          <label>
-            <span class="visually-hidden">Подписаться на рассылку.</span>
-            <input class="input" type="email" name="subscribe" placeholder="email@example.com">
-          </label>
-        </form>
-      </div>
-      <div class="footer__column footer__column--dark">
-        <span>© 2010–2019 Компания «Техномарт» Все права защищены</span>
-      </div>
-      <div class="footer__column footer__column--dark">
-        <span>Разработано — <a href="#">htmlacademy.ru</a></span>
+      <div class="footer__copyrights">
+        <div class="footer__content footer__content--copyrights container">
+          <div class="footer__column">
+            <span>© 2010–2019 Компания «Техномарт» Все права защищены</span>
+          </div>
+          <div class="footer__column">
+            <span>Разработано — <a class="footer__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></span>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
