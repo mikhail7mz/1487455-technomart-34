@@ -67,10 +67,12 @@
             <a class="user-menu__item user-menu__item--favorite" href="#">
               <span class="visually-hidden">Избранное.</span>
               <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
+              <span class="user-menu__counter">12</span>
             </a>
             <a class="user-menu__item user-menu__item--cart" href="#">
               <span class="visually-hidden">Корзина.</span>
               <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
+              <span class="user-menu__counter">2</span>
             </a>
             <a class="user-menu__item user-menu__item--button button button--green" href="#">Оформить заказ</a>
           </div>
@@ -80,17 +82,41 @@
     <main class="main">
       <section class="promo container">
         <h2 class="visually-hidden">Каталог товаров и услуг.</h2>
-        <div class="promo__tile promo__tile--paints item-new">
+        <div class="promo__tile item-new">
           <h2 class="promo__title subheading">материалы</h2>
-          <a class="promo__link button" href="#">на любой вкус</a>
+          <a class="promo__link button" href="#">
+            <svg class="promo__link-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#arrow-right"></use>
+            </svg>
+            <span>на любой вкус</span>
+          </a>
+          <svg class="promo__tile-icon" width="90" height="90" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons/icons.svg#paints"></use>
+          </svg>
         </div>
-        <div class="promo__tile promo__tile--tool">
+        <div class="promo__tile">
           <h2 class="promo__title subheading">инструмент</h2>
-          <a class="promo__link button" href="#">на все случаи</a>
+          <a class="promo__link button" href="#">
+            <svg class="promo__link-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#arrow-right"></use>
+            </svg>
+            <span>на все случаи</span>
+          </a>
+          <svg class="promo__tile-icon" width="90" height="90" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons/icons.svg#tool"></use>
+          </svg>
         </div>
-        <div class="promo__tile promo__tile--equipment">
+        <div class="promo__tile">
           <h2 class="promo__title subheading">техника</h2>
-          <a class="promo__link button" href="#">для стройки</a>
+          <a class="promo__link button" href="#">
+            <svg class="promo__link-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#arrow-right"></use>
+            </svg>
+            <span>для стройки</span>
+          </a>
+          <svg class="promo__tile-icon" width="90" height="90" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons/icons.svg#equipment"></use>
+          </svg>
         </div>
         <div class="promo__tile promo__tile promo__tile--big slider">
           <ul class="slider__slide-list">
@@ -118,13 +144,29 @@
             </li>
           </ul>
         </div>
-        <div class="promo__tile promo__tile--sale">
+        <div class="promo__tile">
           <h2 class="promo__title subheading">Скидки 50%</h2>
-          <a class="promo__link button" href="#">на 350 товаров</a>
+          <a class="promo__link button" href="#">
+            <svg class="promo__link-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#arrow-right"></use>
+            </svg>
+            <span>на 350 товаров</span>
+          </a>
+          <svg class="promo__tile-icon" width="90" height="90" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons/icons.svg#sale"></use>
+          </svg>
         </div>
-        <div class="promo__tile promo__tile--delivery">
+        <div class="promo__tile">
           <h2 class="promo__title subheading">Доставка</h2>
-          <a class="promo__link button" href="#">бесплатно</a>
+          <a class="promo__link button" href="#">
+            <svg class="promo__link-icon" width="16" height="16" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/icons.svg#arrow-right"></use>
+            </svg>
+            <span>бесплатно</span>
+          </a>
+          <svg class="promo__tile-icon" width="90" height="90" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/icons/icons.svg#delivery"></use>
+          </svg>
         </div>
       </section>
       <section class="catalog container">
@@ -133,7 +175,7 @@
           <fieldset class="filter__fieldset">
             <legend class="filter__title">цена</legend>
             <div class="range-double">
-              <div class="range-double__interval">
+              <div class="range-double__interval" style="width: 138px; left: 0;">
                 <button class="range-double__toggle" type="button">
                   <span class="visually-hidden">Изменить минимальную цену.</span>
                 </button>
@@ -143,52 +185,52 @@
               </div>
             </div>
             <div class="filter__field-group-inline">
-              <label class="filеer__field">
+              <label class="filter__field">
                 <span class="visually-hidden">Изменить минимальную цену.</span>
-                <input class="control-input" name="price-min" type="number" value="0">
+                <input class="filter__field-group-inline-input control-input" name="price-min" type="number" value="0">
               </label>
               <span>—</span>
-              <label class="filеer__field">
+              <label class="filter__field">
                 <span class="visually-hidden">Изменить максимальную цену.</span>
-                <input class="control-input" name="price-min" type="number" value="30000">
+                <input class="filter__field-group-inline-input control-input" name="price-min" type="number" value="30000">
               </label>
             </div>
           </fieldset>
           <fieldset class="filter__fieldset">
-            <legend class="filter__title">производители</legend>
-            <label class="filter__field">
-              <input class="control-checkbox" type="checkbox" name="manufacture" value="bosch" checked>
-              <span>BOSCH</span>
+            <legend class="filter__title filter__title--checkbox">производители</legend>
+            <label class="control-checkbox">
+              <input class="control-checkbox__input visually-hidden" type="checkbox" name="manufacture" value="bosch" checked>
+              <span class="control-checkbox__label">BOSCH</span>
             </label>
-            <label class="filter__field">
-              <input class="control-checkbox" type="checkbox" name="manufacture" value="interskol">
-              <span>ИНТЕРСКОЛ</span>
+            <label class="control-checkbox">
+              <input class="control-checkbox__input visually-hidden" type="checkbox" name="manufacture" value="interskol">
+              <span class="control-checkbox__label">ИНТЕРСКОЛ</span>
             </label>
-            <label class="filter__field">
-              <input class="control-checkbox" type="checkbox" name="manufacture" value="makita" checked>
-              <span>MAKIta</span>
+            <label class="control-checkbox">
+              <input class="control-checkbox__input visually-hidden" type="checkbox" name="manufacture" value="makita" checked>
+              <span class="control-checkbox__label">MAKIta</span>
             </label>
-            <label class="filter__field">
-              <input class="control-checkbox" type="checkbox" name="manufacture" value="dewalt">
-              <span>Dewalt</span>
+            <label class="control-checkbox">
+              <input class="control-checkbox__input visually-hidden" type="checkbox" name="manufacture" value="dewalt">
+              <span class="control-checkbox__label">Dewalt</span>
             </label>
-            <label class="filter__field">
-              <input class="control-checkbox" type="checkbox" name="manufacture" value="hitachi">
-              <span>Hitachi</span>
+            <label class="control-checkbox">
+              <input class="control-checkbox__input visually-hidden" type="checkbox" name="manufacture" value="hitachi">
+              <span class="control-checkbox__label">Hitachi</span>
             </label>
           </fieldset>
           <fieldset class="filter__fieldset">
-            <legend class="filter__title">питание</legend>
-            <label class="filter__field">
-              <input class="control-radio" type="radio" name="power" value="dewalt">
-              <span>Dewalt</span>
+            <legend class="filter__title filter__title--radio">питание</legend>
+            <label class="control-radio">
+              <input class="control-radio__input visually-hidden" type="radio" name="power" value="mobile" checked>
+              <span class="control-radio__label">Аккумуляторные</span>
             </label>
-            <label class="filter__field">
-              <input class="control-radio" type="radio" name="power" value="hitachi">
-              <span>Hitachi</span>
+            <label class="control-radio">
+              <input class="control-radio__input visually-hidden" type="radio" name="power" value="plug">
+              <span class="control-radio__label">Сетевые</span>
             </label>
           </fieldset>
-          <button class="button button--transparent" type="button">Показать</button>
+          <button class="filter__submit button" type="button">Показать</button>
         </form>
         <div class="catalog__content">
           <div class="control-select">
@@ -348,7 +390,9 @@
         <section class="contacts">
           <h2 class="contacts__heading heading">Контакты</h2>
           <p class="contacts__text">Вы можете забрать товар сами, &nbsp;заехав в наш офис:</p>
-          <img width="500" height="347" src="images/map-address.jpg" alt="Карта с адресом.">
+          <a class="contacts__link" href="#">
+            <img width="500" height="347" src="images/map-address.jpg" alt="Карта с адресом.">
+          </a>
         </section>
       </div>
     </main>
