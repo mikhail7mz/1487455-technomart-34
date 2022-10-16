@@ -33,7 +33,30 @@
               </button>
             </label>
           </form>
-          <button class="button button--simple button--login" type="button">Войти</button>
+          <div class="dropdown">
+            <button class="dropdown__button button button--simple button--login" type="button">Войти</button>
+            <form class="dropdown__content" action="https://echo.htmlacademy.ru/" method="post">
+              <h2 class="dropdown__title subheading">личный кабинет</h2>
+              <!-- Для стилизации поля с ошибкой необходимо добавить у input класс is-error -->
+              <label class="dropdown__label">
+                <input class="dropdown__input control-input" type="text" name="login" placeholder="Логин">
+              </label>
+              <label class="dropdown__label">
+                <input class="dropdown__input control-input" type="password" name="password" placeholder="Пароль">
+              </label>
+              <div class="dropdown__content-columns">
+                <label class="dropdown__checkbox control-checkbox">
+                  <input class="control-checkbox__input visually-hidden" type="checkbox" name="remember" checked>
+                  <span class="control-checkbox__label">Запомнить меня</span>
+                </label>
+                <a class="dropdown__link" href="#">Забыл пароль</a>
+              </div>
+              <div class="dropdown__content-columns">
+                <button class="button button--green" type="submit">войти</button>
+                <a class="button button--transparent" href="#">регистрация</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <div class="header__row header__row--blue">
@@ -67,12 +90,10 @@
             <a class="user-menu__item user-menu__item--favorite" href="#">
               <span class="visually-hidden">Избранное.</span>
               <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
-              <span class="user-menu__counter">12</span>
             </a>
             <a class="user-menu__item user-menu__item--cart" href="#">
               <span class="visually-hidden">Корзина.</span>
               <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
-              <span class="user-menu__counter">2</span>
             </a>
             <a class="user-menu__item user-menu__item--button button button--green" href="#">Оформить заказ</a>
           </div>
@@ -250,7 +271,7 @@
               <a class="products__price button button--red" href="#">15500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
             <li class="products__item">
@@ -260,7 +281,7 @@
               <a class="products__price button button--red" href="#">25500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
             <li class="products__item item-new">
@@ -269,7 +290,7 @@
               <a class="products__price button button--red" href="#">25500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
             <li class="products__item">
@@ -279,7 +300,7 @@
               <a class="products__price button button--red" href="#">15500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
             <li class="products__item item-new">
@@ -288,7 +309,7 @@
               <a class="products__price button button--red" href="#">25500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
             <li class="products__item">
@@ -297,7 +318,7 @@
               <a class="products__price button button--red" href="#">25500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
             <li class="products__item item-new">
@@ -307,7 +328,7 @@
               <a class="products__price button button--red" href="#">15500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
             <li class="products__item">
@@ -317,7 +338,7 @@
               <a class="products__price button button--red" href="#">25500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
             <li class="products__item item-new">
@@ -326,7 +347,7 @@
               <a class="products__price button button--red" href="#">25500 ₽</a>
               <div class="products__button-list">
                 <button class="products__button products__button--buy button button--green" type="button">купить</button>
-                <button class="products__button products__button--bookmark button" type="button">в закладки</button>
+                <button class="products__button button button--transparent" type="button">в закладки</button>
               </div>
             </li>
           </ul>
@@ -428,8 +449,11 @@
             <p class="form-subscribe__description">Получайте лучшие предложения</p>
             <label>
               <span class="visually-hidden">Подписаться на рассылку.</span>
-              <input class="form-subscribe__input input" type="email" name="subscribe" placeholder="email@example.com">
+              <input class="form-subscribe__input control-input" type="email" name="subscribe" placeholder="email@example.com">
             </label>
+            <button class="form-subscribe__button button button--green" type="submit">
+              <span class="visually-hidden">Подписаться.</span>
+            </button>
           </form>
         </div>
       </div>

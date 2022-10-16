@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Техномарт</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__row header__row--white">
+        <div class="container header__row-content">
+          <h1 class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+          <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <a class="header__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </div>
+      </div>
+      <div class="header__row header__row--darkblue">
+        <div class="container header__row-content">
+          <a class="logo">
+            <img class="logo__image" width="109" height="18" src="images/logo.svg" alt="Логотип.">
+          </a>
+          <form class="form-search" action="https://echo.htmlacademy.ru/" method="get">
+            <label class="form-search__field">
+              <span class="visually-hidden">Поиск.</span>
+              <input class="form-search__input" type="text" name="search" placeholder="Поиск:">
+              <svg class="filter-search__icon" width="20" height="20" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16a8 8 0 1 1 6.32-3.1l5.39 5.4-1.42 1.4-5.38-5.38A7.97 7.97 0 0 1 8 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"/>
+              </svg>
+              <button class="form-search__reset" type="reset">
+                <span class="visually-hidden">Очистить.</span>
+              </button>
+            </label>
+          </form>
+          <div class="dropdown">
+            <button class="dropdown__button button button--simple button--profile" type="button">Равшан Джамшутович</button>
+            <div class="profile dropdown__content">
+              <h2 class="profile__title subheading">Здравствуйте, Равшан&nbsp;Джамшутович</h2>
+              <a class="profile__link button" href="#">мои заказы</a>
+              <a class="profile__link button" href="#">личный кабинет</a>
+              <a class="profile__button button button--transparent" href="#">выйти</a>
+              <button class="dropdown__close" type="button">
+                <span class="visually-hidden">Закрыть.</span>
+              </button>
+            </div>
+          </div>
+          <a class="button button--simple button--logout" href="#">
+            <span class="visually-hidden">Выйти</span>
+          </a>
+        </div>
+      </div>
+      <div class="header__row header__row--blue">
+        <div class="container header__row-content">
+          <nav class="navigation">
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Компания</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Каталог</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Новости</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Спецпредложения</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Доставка</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-menu">
+            <a class="user-menu__item user-menu__item--favorite" href="#">
+              <span class="visually-hidden">Избранное.</span>
+              <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
+              <span class="user-menu__counter">12</span>
+            </a>
+            <a class="user-menu__item user-menu__item--cart" href="#">
+              <span class="visually-hidden">Корзина.</span>
+              <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
+              <span class="user-menu__counter">2</span>
+            </a>
+            <a class="user-menu__item user-menu__item--button button button--green" href="#">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main"></main>
+    <footer class="footer">
+      <div class="footer__content container">
+        <div class="footer__column">
+          <a class="footer__logo logo">
+            <img class="footer__logo-image logo__image" width="111" height="21" src="images/logo.svg" alt="Логотип.">
+          </a>
+          <p class="footer__contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link social__link--pinterst" href="#">
+                <span class="visually-hidden">Перейти в pinterst.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#">
+                <span class="visually-hidden">Перейти в vkontakte.</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vsco" href="#">
+                <span class="visually-hidden">Перейти в vsco.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <p class="footer__text">Обратная связь:</p>
+          <a class="footer__link footer__link--offset" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <form class="form-subscribe" action="https://echo.htmlacademy.ru/" method="get">
+            <p class="form-subscribe__description">Получайте лучшие предложения</p>
+            <label>
+              <span class="visually-hidden">Подписаться на рассылку.</span>
+              <input class="form-subscribe__input control-input" type="email" name="subscribe" placeholder="email@example.com">
+            </label>
+            <button class="form-subscribe__button button button--green" type="submit">
+              <span class="visually-hidden">Подписаться.</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__copyrights">
+        <div class="footer__content footer__content--copyrights container">
+          <div class="footer__column">
+            <span>© 2010–2019 Компания «Техномарт» Все права защищены</span>
+          </div>
+          <div class="footer__column">
+            <span>Разработано — <a class="footer__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
