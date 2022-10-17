@@ -28,34 +28,39 @@
               <svg class="filter-search__icon" width="20" height="20" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16a8 8 0 1 1 6.32-3.1l5.39 5.4-1.42 1.4-5.38-5.38A7.97 7.97 0 0 1 8 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"/>
               </svg>
-              <button class="form-search__reset" type="reset">
-                <span class="visually-hidden">Очистить.</span>
-              </button>
             </label>
+            <button class="form-search__reset" type="reset">
+              <span class="visually-hidden">Очистить.</span>
+            </button>
           </form>
-          <div class="dropdown">
-            <button class="dropdown__button button button--simple button--login" type="button">Войти</button>
-            <form class="dropdown__content" action="https://echo.htmlacademy.ru/" method="post">
-              <h2 class="dropdown__title subheading">личный кабинет</h2>
-              <!-- Для стилизации поля с ошибкой необходимо добавить у input класс is-error -->
-              <label class="dropdown__label">
-                <input class="dropdown__input control-input" type="text" name="login" placeholder="Логин">
-              </label>
-              <label class="dropdown__label">
-                <input class="dropdown__input control-input" type="password" name="password" placeholder="Пароль">
-              </label>
-              <div class="dropdown__content-columns">
-                <label class="dropdown__checkbox control-checkbox">
-                  <input class="control-checkbox__input visually-hidden" type="checkbox" name="remember" checked>
-                  <span class="control-checkbox__label">Запомнить меня</span>
+          <div class="user-menu">
+            <div class="dropdown">
+              <button class="dropdown__button button button--simple button--login" type="button">Войти</button>
+              <form class="dropdown__content" action="https://echo.htmlacademy.ru/" method="post">
+                <h2 class="dropdown__title subheading">личный кабинет</h2>
+                <!-- Для стилизации поля с ошибкой необходимо добавить у input класс is-error -->
+                <label class="dropdown__label">
+                  <input class="dropdown__input control-input" type="text" name="login" placeholder="Логин" required>
                 </label>
-                <a class="dropdown__link" href="#">Забыл пароль</a>
-              </div>
-              <div class="dropdown__content-columns">
-                <button class="button button--green" type="submit">войти</button>
-                <a class="button button--transparent" href="#">регистрация</a>
-              </div>
-            </form>
+                <label class="dropdown__label">
+                  <input class="dropdown__input control-input" type="password" name="password" placeholder="Пароль" required>
+                </label>
+                <div class="dropdown__content-columns">
+                  <label class="dropdown__checkbox control-checkbox">
+                    <input class="control-checkbox__input visually-hidden" type="checkbox" name="remember" checked>
+                    <span class="control-checkbox__label">Запомнить меня</span>
+                  </label>
+                  <a class="dropdown__link" href="#">Забыл пароль</a>
+                </div>
+                <div class="dropdown__content-columns">
+                  <button class="button button--green" type="submit">войти</button>
+                  <a class="button button--transparent" href="#">регистрация</a>
+                </div>
+                <button class="dropdown__close" type="button">
+                  <span class="visually-hidden">Закрыть.</span>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -212,12 +217,12 @@
             <div class="filter__field-group-inline">
               <label class="filter__field">
                 <span class="visually-hidden">Изменить минимальную цену.</span>
-                <input class="filter__field-group-inline-input control-input" name="price-min" type="number" value="0">
+                <input class="filter__field-group-inline-input control-input" type="number" name="price-min" value="0">
               </label>
               <span>—</span>
               <label class="filter__field">
                 <span class="visually-hidden">Изменить максимальную цену.</span>
-                <input class="filter__field-group-inline-input control-input" name="price-min" type="number" value="30000">
+                <input class="filter__field-group-inline-input control-input" type="number" name="price-min" value="30000">
               </label>
             </div>
           </fieldset>
@@ -370,7 +375,7 @@
                 <a class="pagination__link" href="#">4</a>
               </li>
             </ul>
-            <button class="pagination__button button button--red">показать ещё</button>
+            <button class="pagination__button button button--red" type="button">показать ещё</button>
           </div>
         </div>
       </section>
