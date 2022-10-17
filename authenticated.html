@@ -28,26 +28,28 @@
               <svg class="filter-search__icon" width="20" height="20" fill="currentcolor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16a8 8 0 1 1 6.32-3.1l5.39 5.4-1.42 1.4-5.38-5.38A7.97 7.97 0 0 1 8 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"/>
               </svg>
-              <button class="form-search__reset" type="reset">
-                <span class="visually-hidden">Очистить.</span>
-              </button>
             </label>
+            <button class="form-search__reset" type="reset">
+              <span class="visually-hidden">Очистить.</span>
+            </button>
           </form>
-          <div class="dropdown">
-            <button class="dropdown__button button button--simple button--profile" type="button">Равшан Джамшутович</button>
-            <div class="profile dropdown__content">
-              <h2 class="profile__title subheading">Здравствуйте, Равшан&nbsp;Джамшутович</h2>
-              <a class="profile__link button" href="#">мои заказы</a>
-              <a class="profile__link button" href="#">личный кабинет</a>
-              <a class="profile__button button button--transparent" href="#">выйти</a>
-              <button class="dropdown__close" type="button">
-                <span class="visually-hidden">Закрыть.</span>
-              </button>
+          <div class="user-menu">
+            <div class="dropdown">
+              <button class="dropdown__button button button--simple button--profile" type="button">Равшан Джамшутович</button>
+              <div class="profile dropdown__content">
+                <h2 class="profile__title subheading">Здравствуйте, Равшан&nbsp;Джамшутович</h2>
+                <a class="profile__link button" href="#">мои заказы</a>
+                <a class="profile__link button" href="#">личный кабинет</a>
+                <a class="profile__button button button--transparent" href="#">выйти</a>
+                <button class="dropdown__close" type="button">
+                  <span class="visually-hidden">Закрыть.</span>
+                </button>
+              </div>
             </div>
+            <a class="button button--simple button--logout" href="#">
+              <span class="visually-hidden">Выйти</span>
+            </a>
           </div>
-          <a class="button button--simple button--logout" href="#">
-            <span class="visually-hidden">Выйти</span>
-          </a>
         </div>
       </div>
       <div class="header__row header__row--blue">
@@ -80,12 +82,12 @@
           <div class="user-menu">
             <a class="user-menu__item user-menu__item--favorite" href="#">
               <span class="visually-hidden">Избранное.</span>
-              <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
+              <!-- для удаления счетчика необходимо удалить span c классом user-menu__counter -->
               <span class="user-menu__counter">12</span>
             </a>
             <a class="user-menu__item user-menu__item--cart" href="#">
               <span class="visually-hidden">Корзина.</span>
-              <!-- для добавления счетчика необходимо добавить span c классом user-menu__counter -->
+              <!-- для удаления счетчика необходимо удалить span c классом user-menu__counter -->
               <span class="user-menu__counter">2</span>
             </a>
             <a class="user-menu__item user-menu__item--button button button--green" href="#">Оформить заказ</a>
