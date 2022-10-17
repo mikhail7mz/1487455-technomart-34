@@ -141,13 +141,17 @@
         </div>
         <div class="promo__tile promo__tile promo__tile--big slider">
           <ul class="slider__slide-list">
-            <li class="slider__slide">
-              <div class="slider__slide-content">
-                <h2 class="slider__title heading">Дрели</h2>
-                <p class="slider__description">Соседям на радость!</p>
-              </div>
+            <li class="slider__slide active">
+              <h2 class="slider__title heading">Дрели</h2>
+              <p class="slider__description">Соседям на радость!</p>
+              <a class="slider__link button button--red" href="#">Открыть каталог</a>
               <img class="slider__image" width="770" height="390" src="images/slider/drills.jpg" alt="Мужчина использующий дрель.">
-              <a class="slider__link" href="#">Открыть каталог</a>
+            </li>
+            <li class="slider__slide">
+              <h2 class="slider__title heading">Перфораторы</h2>
+              <p class="slider__description">Настроящие мужские игрушки</p>
+              <a class="slider__link button button--red" href="#">Открыть каталог</a>
+              <img class="slider__image" width="770" height="390" src="images/slider/perforators.jpg" alt="Мужчина использующий перфоратор.">
             </li>
           </ul>
           <button class="slider__toggle slider__toggle--prev" type="button">
@@ -156,14 +160,14 @@
           <button class="slider__toggle slider__toggle--next" type="button">
             <span class="visually-hidden">Вперед.</span>
           </button>
-          <ul class="slider__pagination">
-            <li class="slider__pagination-item current">
+          <div class="slider__pagination">
+            <button class="slider__pagination-item active" type="button">
               <span class="visually-hidden">Слайд 1.</span>
-            </li>
-            <li class="slider__pagination-item">
+            </button>
+            <button class="slider__pagination-item" type="button">
               <span class="visually-hidden">Слайд 2.</span>
-            </li>
-          </ul>
+            </button>
+          </div>
         </div>
         <div class="promo__tile">
           <h2 class="promo__title subheading">Скидки 50%</h2>
@@ -468,5 +472,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="scripts/slider.js"></script>
   </body>
 </html>
