@@ -1196,7 +1196,7 @@ body {
   top: 50%;
   right: 0;
   width: 28px;
-  height: 28px;
+  height: 70%;
   border-radius: 4px;
   background-color: var(--basic-red);
   transform: translate(40%, -50%) rotate(-45deg);
