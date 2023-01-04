@@ -100,6 +100,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  min-width: 1400px;
   min-height: 100%;
   margin: 0;
   font: 16px/24px "PT Sans", Arial, Tahoma, sans-serif;
@@ -492,6 +493,7 @@ body {
   border-radius: 2px;
   font: inherit;
   color: var(--basic-blue-dark);
+  background: inherit;
   appearance: none;
 }
 
@@ -1171,11 +1173,12 @@ body {
 }
 
 .products__price {
+  position: relative;
   align-self: center;
-  min-width: 122px;
+  min-width: 139px;
   margin-top: auto;
   padding: 11px;
-  border-radius: 4px;
+  padding-right: 28px;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
@@ -1183,28 +1186,29 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--basic-white);
-  background-color: var(--basic-red);
-  transform: translateX(-9px);
-}
-
-.products__old-price ~ .products__price {
-  margin-top: 0;
 }
 
 .products__price::after {
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0;
-  width: 28px;
-  height: 70%;
-  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
   background-color: var(--basic-red);
-  transform: translate(40%, -50%) rotate(-45deg);
+  -webkit-mask: url("../images/icons/price.svg") center / 100% 100%;
+  mask: url("../images/icons/price.svg") center / 100% 100%;
   content: "";
 }
 
-.products__price:hover {
-  cursor: var(--cursor-pointer);
+.products__price,
+.products__price:hover,
+.products__price:active {
+  background-color: transparent;
+}
+
+.products__old-price ~ .products__price {
+  margin-top: 0;
 }
 
 .products__button-list {
@@ -1214,8 +1218,9 @@ body {
   display: none;
   flex-direction: column;
   gap: 11px;
-  min-width: 135px;
+  min-width: 147px;
   max-height: 150px;
+  padding: 6px;
   transform: translateX(-50%);
   overflow-y: auto;
 }
